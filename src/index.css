@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Kosugi+Maru:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Fredoka One", "Kosugi Maru", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-vibrant-pink-light: #FFEBEE;
+  --color-vibrant-pink-regular: #F472B6;
+  --color-vibrant-pink-dark: #DB2777;
+  --color-vibrant-yellow-light: #FFEB3B;
+  --color-vibrant-yellow-dark: #FBC02D;
+  --color-vibrant-green-light: #81C784;
+  --color-vibrant-green-dark: #4CAF50;
+  --color-vibrant-blue-light: #64B5F6;
+  --color-vibrant-blue-dark: #2196F3;
+  --color-vibrant-orange-light: #FFB74D;
+  --color-vibrant-orange-dark: #FB8C00;
+}
+
+body {
+  background-color: var(--color-vibrant-pink-light);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+.bubble-shadow-pink { box-shadow: 0 8px 0 var(--color-vibrant-pink-regular); }
+.bubble-shadow-green { box-shadow: 0 8px 0 var(--color-vibrant-green-dark); }
+.bubble-shadow-blue { box-shadow: 0 8px 0 var(--color-vibrant-blue-dark); }
+.bubble-shadow-orange { box-shadow: 0 8px 0 var(--color-vibrant-orange-dark); }
+.bubble-shadow-yellow { box-shadow: 0 8px 0 var(--color-vibrant-yellow-dark); }
+
+.bouncy-card {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.btn-vibrant-press:active {
+  transform: translateY(4px);
+  box-shadow: 0 4px 0 currentColor;
+}
